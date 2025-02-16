@@ -1,0 +1,303 @@
+/* ================================
+   FONT IMPORT (For Downloaded Font)
+================================ */
+@font-face {
+  font-family: Blinging1;
+  src: url(/fonts/NeueMachina.woff);
+}
+@font-face {
+  font-family: Blinging2;
+  src: url(/fonts/Pp-Neue.woff);
+}
+@font-face {
+  font-family: Blinging3;
+  src: url(/fonts/Satoshi.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  /* ================================
+     THEME COLOR VARIABLES
+  ================================ */
+  :root {
+    /* Primary Theme Colors */
+    --primary-purple: #6D376D;
+  --dark-purple: #4b0082;
+  --light-purple: #9a4dcc;
+  
+    /* Accent Colors */
+    --golden: #c5a900;
+    --golden-light: #e3c700;
+  
+    /* Text and Background */
+    --black: #1c1c1c;
+    --dark-grey: #3b3b3b;
+    --grey: #6d6d6d;
+    --light-grey: #d3d3d3;
+    --white: #ffffff;
+    
+    /* Highlight Colors */
+    --highlight: var(--primary-purple);
+    --highlight-hover: var(--dark-purple);
+    
+    /* Font Settings */
+    --font-family: "Poppins", serif, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+  }
+  
+  /* ================================
+     RESPONSIVE FONT SIZES
+  ================================ */
+  :root {
+    /* Default Font Sizes */
+    --font-small: 0.875rem;      /* 14px */
+    --font-regular: 1rem;        /* 16px */
+    --font-large: 1.25rem;       /* 20px */
+    --font-xlarge: 1.5rem;       /* 24px */
+    --font-xxlarge: 2rem;        /* 32px */
+  }
+  
+  @media (max-width: 1024px) {
+    :root {
+      --font-small: 0.813rem;    /* 13px */
+      --font-regular: 0.938rem;  /* 15px */
+      --font-large: 1.125rem;    /* 18px */
+      --font-xlarge: 1.375rem;   /* 22px */
+      --font-xxlarge: 1.75rem;   /* 28px */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --font-small: 0.75rem;     /* 12px */
+      --font-regular: 0.875rem;  /* 14px */
+      --font-large: 1rem;        /* 16px */
+      --font-xlarge: 1.25rem;    /* 20px */
+      --font-xxlarge: 1.5rem;    /* 24px */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    :root {
+      --font-small: 0.688rem;    /* 11px */
+      --font-regular: 0.813rem;  /* 13px */
+      --font-large: 0.938rem;    /* 15px */
+      --font-xlarge: 1.125rem;   /* 18px */
+      --font-xxlarge: 1.375rem;  /* 22px */
+    }
+  }
+  
+  /* ================================
+     GLOBAL STYLES & TYPOGRAPHY
+  ================================ */
+  body {
+    font-family: var(--font-family);
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--highlight);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 1rem 0;
+  }
+  
+  h1 {
+    font-size: var(--font-xxlarge);
+  }
+  h2 {
+    font-size: var(--font-xlarge);
+  }
+  h3 {
+    font-size: var(--font-large);
+  }
+  h4 {
+    font-size: var(--font-regular);
+  }
+  h5 {
+    font-size: var(--font-small);
+    color: var(--grey);
+  }
+  h6 {
+    font-size: var(--font-small);
+    color: var(--grey);
+    font-weight: var(--font-weight-normal);
+  }
+  .nav-items a{
+    font-size: var(--font-large);
+  }
+  
+  /* Paragraphs */
+  p {
+    color: var(--black);
+    font-size: var(--font-regular);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Links */
+  a {
+    color: var(--highlight);
+    font-family: var(--font-family);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: var(--highlight-hover);
+  }
+  
+  /* ================================
+     UTILITIES
+  ================================ */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-golden {
+    color: var(--golden);
+  }
+  
+  .bg-primary {
+    background-color: var(--primary-purple);
+    color: var(--white);
+  }
+  
+  .bg-grey {
+    background-color: var(--light-grey);
+    color: var(--black);
+  }
+
+
+  /* ================================
+     HEADER
+  ================================ */
+  header{
+    height: inherit;
+    width: 100%;
+    display: flex;
+    position: fixed;
+
+  }
+  nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  .leftcontent{
+    /* height: 100%; */
+    /* width: 50%; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+  }
+  .rightcontent .logo-container img{
+    height: 5rem;
+    width: auto;
+  }
+  section.hero{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position:relative;
+  }
+  .hero .videosection{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  .hero .videosection video{
+    height: 100vh;  
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+  .hero .overlap{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .hero .content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .hero .content .center-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    position: absolute;
+    top: 15%;
+    gap: 1rem;
+    width: 100%;
+  }
+  .hero .content .middle-text .row1{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem
+  }
+  .hero .content .middle-text{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  section.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+    height: 200vh; /* Make it taller so scrolling effect happens */
+    overflow: hidden;
+    padding: 5rem 0;
+  }
+  
+  .about-section .left-content {
+    width: 50%;
+    position: sticky;
+    top: 10rem; /* Adjust based on your design */
+  }
+  
+  .about-section .right-content {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Animation for right-side boxes */
+  .about-section .right-content .box {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* When in viewport, add active class to trigger animation */
+  .about-section .right-content .box.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
