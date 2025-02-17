@@ -17,13 +17,19 @@
         <div class="leftcontent">
           <div class="nav-items">
             <div class="dropdown">
-                <a href="#">Venues</a>
+              <a href="#" class="text dropdown-toggle" data-bs-toggle="dropdown" style="color: black;height: 2rem;display: inline-block;margin: 0px;" aria-expanded="false">
+                Venues <span><i class="bi bi-caret-down-fill"></i></span>
+              </a>
+              <div class="dropdown-items">
+                <a href="#" class="text">- CRWA</a>
+                <a href="#" class="text">- Airoli</a>
+              </div>
             </div>
-            <a href="#">About</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
+            <a href="#" class="text">About</a>
+            <a href="#" class="text">Gallery</a>
+            <a href="#" class="text">Contact</a>
             <div class="enqure-now">
-              <a href="#">Enquire Now</a>
+              <a href="#" class="text">Enquire Now</a>
             </div>
           </div>
         </div>
@@ -364,7 +370,9 @@
               expectations and deliver results that exceed our clients'
               expectations.
             </p>
-            <button>Read More</button>
+            <div class="button">
+              <a href="" class="text">Read More</a>
+            </div>
         </div>
         <div class="right-content">
             <div class="box">
@@ -574,5 +582,34 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="./assets/js/main.js"></script>
+    <script>
+      let elements = document.querySelectorAll(".text");
+      elements.forEach(element => {
+          let innerText = element.innerText;
+          element.innerHTML = "";
+
+          let textContainer = document.createElement("div");
+          textContainer.classList.add("block");
+
+          for (let letter of innerText) {
+              let letterElement = document.createElement("span");
+              letterElement.innerText = letter.trim() === "" ? " " : letter;
+              letterElement.classList.add("letter");
+              textContainer.appendChild(letterElement);
+          }
+          element.appendChild(textContainer);
+          element.appendChild(textContainer.cloneNode(true));
+      });
+
+      elements.forEach(element => {
+          element.addEventListener("mouseover", function() {
+              element.classList.add("play");
+          });
+
+          element.addEventListener("mouseleave", function() {
+              element.classList.remove("play");
+          });
+      });
+  </script>
   </body>
 </html>
