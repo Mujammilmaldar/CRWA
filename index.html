@@ -412,7 +412,7 @@
                             expertise — impact lives at scale.</p>
                     </div>
                     <div class="img">
-                        <img src="assets/images/1.png" alt="Image 1">
+                      <img src="assets/images/successfull.png" alt="Image 1">
                     </div>
             </div>
             <div class="box">
@@ -425,7 +425,7 @@
                             expertise — impact lives at scale.</p>
                     </div>
                     <div class="img">
-                        <img src="assets/images/1.png" alt="Image 1">
+                      <img src="assets/images/successfull.png" alt="Image 1">
                     </div>
             </div>
         </div>
@@ -446,20 +446,21 @@
             </div>
           </div>
           <div class="album">
-            <div class="responsive-container-block bg">
-              <div class="responsive-container-block img-cont">
-                <img class="img" src="assets/images/1.png">
-                <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.5.svg">
-                <img class="img img-last" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.6.svg">
+            <div class="images-container">
+              <div class="images-box">
+                <img class="img vertical-img" src="assets/images/1.png">
+                <img class="img medium-img" src="assets/images/2.png">
+                <img class="img horizontal-img" src="assets/images/3.png">
               </div>
-              <div class="responsive-container-block img-cont">
-                <img class="img img-big" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.11.svg">
-                <img class="img img-big img-last" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.10.svg">
+              <div class="images-box">
+                <img class="img vertical-img" src="assets/images/2.png">
+                <img class="img img-big horizontal-img" src="assets/images/4.png">
+                <img class="img img-big horizontal-img" src="assets/images/3.png">
               </div>
-              <div class="responsive-container-block img-cont">
-                <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.7.svg">
-                <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.8.svg">
-                <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.9.svg">
+              <div class="images-box">
+                <img class="img horizontal-img" src="assets/images/3.png">
+                <img class="img horizontal-img" src="assets/images/5.png">
+                <img class="img medium-img" src="assets/images/2.png">
               </div>
             </div>
           </div>
@@ -495,16 +496,19 @@
         </div>
         <div class="form-section">
           <form action="">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <div class="row">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+              </div>
             </div>
-          
-            <div class="form-group">
-              <label for="phone">Phone Number:</label>
-              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-            </div>
-          
+          <div class="row">
+
             <div class="form-group">
               <label for="event-type">Event Type:</label>
               <select id="event-type" name="event-type" required>
@@ -515,16 +519,19 @@
                 <option value="other">Other</option>
               </select>
             </div>
-          
+          </div>
+          <div class="row">
+
             <div class="form-group">
               <label for="event-date">Date of Event:</label>
               <input type="date" id="event-date" name="event-date" required>
             </div>
-          
+            
             <div class="form-group">
               <label for="guest-count">Estimated Guest Count:</label>
               <input type="number" id="guest-count" name="guest-count" placeholder="Enter estimated guests" required>
             </div>
+          </div>
           
             <div class="form-group">
               <label for="budget">Budget Range:</label>

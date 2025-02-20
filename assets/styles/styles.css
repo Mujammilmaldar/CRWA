@@ -599,142 +599,38 @@ section.about-section .right-content .box{
   transform: rotate(45deg);
   transition: all ease-in-out 0.3s;
 }
-.box .img{
+section.gallery-section{
   height: 100%;
-  min-height: 175px;
-}
-.box .img img{
-  height: 60px;
-}
-.box .content h4{
-  font-size: var(--font-xxlarge);
-  margin: 0px;
-}
-.gallery-section {
-  padding: 2rem;
-}
-.album .responsive-container-block {
-  min-height: 75px;
-  height: fit-content;
   width: 100%;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  /* padding: 2rem; */
+}
+section.gallery-section .album{
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  justify-content: flex-start;
 }
-
-.album .responsive-container-block.bg {
-  max-width: 1320px;
-  margin: 0 0 0 0;
+section.gallery-section .album .images-container{
+  display: flex;
 }
-
-.album .img {
-  width: 100%;
-  margin: 0 0 20px 0;
-}
-
-.album #i9rb {
-  color: black;
-}
-
-.album #ir6i {
-  color: black;
-}
-
-.album #ikz3b {
-  color: black;
-}
-
-.album .responsive-container-block.img-cont {
+.images-box{
+  display: flex;
   flex-direction: column;
-  max-width: 33.3%;
-  min-height: auto;
-  margin: 0 0 0 0;
-  height: 100%;
+  align-items: center;
+  width: 33.33%;
+  gap: 1rem;
+}
+.vertical-img{
+  max-width: 90%;
+  max-height :100%;
 }
 
-.album #ipix {
-  color: black;
+.horizontal-img{
+  max-width: 90%;
+  max-height: 100%;
 }
 
-.album #ipzoh {
-  color: black;
+.medium-img{
+  max-width: 90%;
+  /* max-height: 300px; */
 }
-
-.album #ig5q8 {
-  color: black;
-}
-
-.album #imtzl {
-  color: black;
-}
-
-.album #i53es {
-  color: black;
-}
-
-.album .img.img-big {
-  height: 50%;
-  margin: 0 0 16px 0;
-}
-
-@media (max-width: 1024px) {
-  .album .img {
-    margin: 0 0 18px 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .album .img {
-    max-width: 32.5%;
-    margin: 0 0 0 0;
-  }
-
-  .album .responsive-container-block.bg {
-    flex-direction: column;
-  }
-
-  .album .responsive-container-block.img-cont {
-    max-width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .album .img.img-big {
-    max-width: 49%;
-    margin: 0 0 0 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .album .img {
-    max-width: 94%;
-    margin: 0 0 25px 0;
-  }
-
-  .album .responsive-container-block.img-cont {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 10px 10px 10px;
-  }
-
-  .album .img.img-big {
-    max-width: 94%;
-    margin: 0 0 25px 0;
-  }
-
-  .album .img.img-last {
-    margin: 0 0 5px 0;
-  }
-}
-
 section.contact-section{
   padding: 2rem;
   display: flex;
@@ -778,11 +674,84 @@ section.contact-section .inner-text .third-inner-content h6{
 }
 
 section.contact-section  .form-section{
-  display: flex;
+  /* display: flex; */
+  max-width: 600px;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 8rem 4rem;
 }
 
-section.contact-section .form-section form{
+.form-section {
+  background: transparent;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  min-width: 40%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #333;
+  font-family: 'Blinging3';
+  font-size: var(--font-regular);
+}
+
+.form-group input,
+.form-group select {
+  font-family: var(--font-regular);
+  background-color: transparent;
+  font-family: 'Blinging3';
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-purple);
+  outline: none;
+}
+
+button[type="submit"] {
+  font-family: 'Blinging3';
+  background: var(--primary-purple);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background: var(--primary-purple);
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
   }
+}
