@@ -8,7 +8,7 @@
   </head>
   <body class="index-page" theme="golden">
     <header>
-      <nav>
+      <nav class="desktop-navbar">
         <div class="rightcontent">
           <div class="logo-container">
             <img src="assets/images/logo.png" alt="Logo" class="logo" />
@@ -34,6 +34,53 @@
           </div>
         </div>
       </nav>
+      <nav class="mobile-navbar">
+        <!-- Span line as border-bottom -->
+        <span class="border-line"></span>
+      
+        <!-- Hamburger, Logo, and Enquire Now in a single row -->
+        <div class="top-row">
+          <!-- Hamburger -->
+          <div class="hamburger" id="hamburger">
+            <div class="toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+      
+          <!-- Logo -->
+          <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Logo" class="logo" />
+          </div>
+      
+          <!-- Justify space -->
+          <div class="justify-space"></div>
+      
+          <!-- Enquire Now -->
+          <div class="enquire-now">
+            <a href="#" class="text">Enquire Now</a>
+          </div>
+        </div>
+      
+        <!-- Navbar Content -->
+        <div class="nav-items" id="nav-items">
+          <div class="dropdown">
+            <a href="#" class="text dropdown-toggle" data-bs-toggle="dropdown">
+              Venues <span><i class="bi bi-caret-down-fill"></i></span>
+            </a>
+            <div class="dropdown-items">
+              <a href="#" class="text">- CRWA</a>
+              <a href="#" class="text">- Airoli</a>
+            </div>
+          </div>
+          <a href="#" class="text">About</a>
+          <a href="#" class="text">Gallery</a>
+          <a href="#" class="text">Contact</a>
+        </div>
+      </nav>
+      
+      
     </header>
     <main>
       <section data-color="golden" id="hero" class="hero Home section">
@@ -430,7 +477,7 @@
             </div>
         </div>
       </section>
-        <section class="gallery-section">
+        <section class="gallery-section" style="margin-bottom: 4rem;">
           <div class="toggles">
             <div class="button-era">
               <h6>Wedding</h6>
